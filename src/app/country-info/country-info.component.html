@@ -1,0 +1,14 @@
+<div style="text-align:center">
+  <h1>
+    Know the Globe
+  </h1>
+  <form class="search-container">
+    <input #searchText type="text" id="search-bar" (keyup.enter)="searchCountry(searchText.value)"
+      placeholder="Enter Country Name?">
+    <a (click)="searchCountry(searchText.value)"><img class="search-icon"
+      src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+  </form>
+  <div>
+    {{data | json}}
+  </div>
+</div>
