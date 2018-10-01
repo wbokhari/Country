@@ -1,10 +1,8 @@
 <div class="container">
   <div class="grid-container">
     <div class="grid-item">
-      <h1>
-        Know the Globe
-      </h1>
       <form class="search-container">
+        <h1>Know the Globe</h1>
         <input #searchText type="text" id="search-bar" (keyup.enter)="searchCountry(searchText.value)"
           placeholder="Enter Country Name?">
         <a (click)="searchCountry(searchText.value)"><img class="search-icon"
