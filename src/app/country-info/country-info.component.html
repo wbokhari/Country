@@ -1,17 +1,22 @@
-<div style="text-align:center">
-  <h1>
-    Know the Globe
-  </h1>
-  <form class="search-container">
-    <input #searchText type="text" id="search-bar" (keyup.enter)="searchCountry(searchText.value)"
-      placeholder="Enter Country Name?">
-    <a (click)="searchCountry(searchText.value)"><img class="search-icon"
-      src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
-  </form>
-  <div>
-    <li *ngFor="let country of countries">
-      {{country.capital}}
-      <img src="{{country.flag}}">
-    </li>
+<div class="container">
+  <div class="grid-container">
+    <div class="grid-item">
+      <h1>
+        Know the Globe
+      </h1>
+      <form class="search-container">
+        <input #searchText type="text" id="search-bar" (keyup.enter)="searchCountry(searchText.value)"
+          placeholder="Enter Country Name?">
+        <a (click)="searchCountry(searchText.value)"><img class="search-icon"
+          src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+      </form>
+    </div>
+    <div class="grid-item" *ngFor="let country of countries">
+        <p>Country: {{country.name}}</p>
+        <p>Capital City: {{country.capital}}</p>
+        <p>Curency: {{country.currencies[0].name}}</p>
+        <img class="flag" src="{{country.flag}}">
+    </div>
   </div>
 </div>
+
